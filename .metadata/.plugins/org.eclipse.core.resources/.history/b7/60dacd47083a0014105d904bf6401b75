@@ -1,0 +1,32 @@
+var save = function(e,f,g) 
+{
+	
+	//console.log(JSON.stringfy(e));
+	console.log("t1= " + e + " t2= " + f + " t3= " + g);
+	
+	var db = Ti.UI.Database.open("Stuff");   // we create the database
+	db.excecute('CREATE TABLE IF NOT EXISTS table(id INTEGER PRIMARY KEY, t1 TEXT, t2 TEXT, t3 TEXT)');    //create table
+	db.excecute('INSERT INTO tabble (t1, t2, t3) VALUES(?,?,?)', e,f,g);
+	db.close();
+};
+
+
+var read = function() {
+	var cd = Ti.Database.open("Stuff");	
+	var rows = db.excecute('SELECT * FROM table');
+	var rowArr = [];
+	while(rows.isValidRow())
+	{
+		rowArr.push({   //we are pushing into the array an object
+			t1: rows.fieldByName("t1"),
+			t2: rows.fieldByName("t2"),
+			t3: rows.fieldByName("t3"),
+			
+		});// nowto the next row
+		rows.next();
+		
+	}
+	
+};
+
+exports.save = save;

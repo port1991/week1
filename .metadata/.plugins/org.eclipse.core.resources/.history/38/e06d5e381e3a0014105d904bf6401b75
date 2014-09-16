@@ -1,0 +1,13 @@
+
+var mainWindow = Ti.UI.createWindow ({
+	title: 'Create a Note',
+	backgroundImage: 'grid2.png',
+	fullscreen: true,
+	layout: 'vertical'
+});
+
+
+exports.mainWindow = mainWindow;
+
+
+

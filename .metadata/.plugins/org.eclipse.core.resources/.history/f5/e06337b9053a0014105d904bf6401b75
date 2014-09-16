@@ -1,0 +1,7 @@
+var save = function(e) 
+{
+	
+	console.log(JSON.stringfy(e));
+};
+
+exports.save = save;

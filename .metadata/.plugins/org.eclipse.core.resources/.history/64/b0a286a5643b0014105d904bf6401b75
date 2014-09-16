@@ -1,0 +1,38 @@
+// initializing titanium cloud module
+var Cloud = require("ti.cloud"); // this one is the cloud module of titanium, its a default module of titanium
+
+Cloud.Users.login({
+    login: 'portilla_1@msn.com', // email here
+    password: 'mhpr1991' // password here
+}, function (e) {
+    if (e.success) {
+        //var user = e.users[0];
+       // alert('Success:\n' +'id: ' + user.id + '\n' +'sessionId: ' + Cloud.sessionId + '\n' +'username: ' + user.username);
+    } else {
+     console.log("Login error: "+ e);
+        //alert('Error:\n' +((e.error && e.message) || JSON.stringify(e)));
+    }
+});
+var tabGroup = Titanium.UI.createTabGroup();
+
+// first tab prepare
+var window1 = require('notes');
+var tab1 = Ti.UI.createTab({
+	icon: 'sample-504-doghouse.png',
+	title: 'My Notes',
+	window: window1.noteWindow
+});
+
+// second tab prepare
+var press = require('create');
+var tab2 = Titanium.UI.createTab({
+	icon : 'KS_nav_views.png',
+	title : 'Create New',
+	window : press.mainWindow
+});
+
+// adding all tabs
+tabGroup.addTab(tab1);
+tabGroup.addTab(tab2);
+tabGroup.open();
+

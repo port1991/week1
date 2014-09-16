@@ -1,0 +1,13 @@
+var backgroundWindow = Ti.UI.createWindow ({
+	title: '',
+	//barImage:'ironmanicon.png',
+	backgroundImage: 'grid.png',
+	//fullscreen: true
+	layout:'vertical'
+});
+
+var t1 = Ti.UI.createTextField({
+	
+	width: 200,
+	top: 40
+});

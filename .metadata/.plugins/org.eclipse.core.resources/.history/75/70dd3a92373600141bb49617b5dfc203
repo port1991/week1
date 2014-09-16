@@ -1,0 +1,45 @@
+var win = Titanium.UI.currentWindow;  
+var data = [];  
+var xhr = Titanium.Network.createHTTPClient();  
+xhr.open("GET","https://<smpusername>:<smppassword>@<smphostname>:<proxport>/<applicationID>/ WeatherWS/Weather.asmx/GetWeatherInformation");  
+xhr.setRequestHeader("Content-Type","application/atom+xml");  
+xhr.setTimeout(5000);  
+xhr.onload = function(){  
+    try{  
+        var doc = this.responseXML.documentElement;  
+        var items = doc.getElementsByTagName("WeatherDescription");  
+        var x = 0;  
+        for(var i = 0; i< items.length; i++){  
+            var item = items.item(i);  
+            var description = item.getElementsByTagName("Description").item(0).text;  
+            var imgurl = item.getElementsByTagName("PictureURL").item(0).text;  
+            var row = Ti.UI.createTableViewRow({  
+                height:50  
+                });  
+            var labeltext = description;  
+            var label = Ti.UI.createLabel({  
+                text : labeltext,  
+                left : 55,  
+                top : 5,  
+                bottom : 5,  
+                right : 5  
+            });  
+            var img = Ti.UI.createImageView({  
+                width: 50,  
+                height:50,  
+                left:0,  
+                image:imgurl  
+             });  
+            row.add(img);  
+        row.add(label);  
+            data[x++] = row;  
+        }  
+    }  
+    catch(e){  
+        alert(e);  
+    }      
+    var tableview = Titanium.UI.createTableView({data:data});  
+    Titanium.UI.currentWindow.add(tableview);  
+    win.open();  
+}  
+xhr.send();  

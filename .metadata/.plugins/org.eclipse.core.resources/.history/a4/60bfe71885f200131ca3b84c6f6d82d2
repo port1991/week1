@@ -1,0 +1,51 @@
+
+var loadFile = require("data");
+
+var openDetail = function() {
+var detailWindow = Ti.UI.createWindow({
+backgroundColor : "blue",
+fullscreen : true,
+title : this.title
+});
+
+var detailText = Ti.UI.createLabel({
+text : this.detail,
+top : 100,
+color : "#fff"
+
+});
+
+detailWindow.add(detailText);
+navigationWindow.openWindow(detailWindow);
+};
+
+var mainWindow = Ti.UI.createWindow({
+backgroundColor : "#fff",
+fullscreen : true,
+title : "Team Lists"
+});
+
+var test = Ti.UI.createLabel({
+text: "<< back",
+backgroundColor: "#222",
+color: "#999",
+height: 50,
+font: {
+fontSize: 12,
+fontFamily: "Arial"
+},
+width: "100%",
+bottom: 0,
+textAlign: "center"
+});
+
+var navigationWindow = Ti.UI.iOS.createNavigationWindow({
+window : mainWindow
+});
+
+
+
+//=================
+//============================================
+//===============================================================
+//=============================================================

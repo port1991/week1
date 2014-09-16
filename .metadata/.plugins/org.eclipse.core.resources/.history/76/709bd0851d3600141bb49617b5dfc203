@@ -1,0 +1,16 @@
+
+var window1 = Titanium.UI.createWindow({  
+    backgroundColor:'#fff'
+});
+
+var arr= (0,1,2,3,4,5,6,7,8,9);
+//var input = prompt
+for( var i = 0; arr.length; i++) {
+	
+	Ti.UI.debug(i + 1);
+	
+}
+
+
+
+window1.open();

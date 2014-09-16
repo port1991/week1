@@ -1,0 +1,33 @@
+var win = Ti.UI.createWindow ({
+	title: '',
+	//barImage:'ironmanicon.png',
+	backgroundImage: 'grid.png',
+	//fullscreen: true
+	layout:'vertical',
+	fullscreen: true
+});
+
+var t1 = Ti.UI.createTextField({
+
+	width: 200,
+	top: 20
+});
+
+var t2 = Ti.UI.createTextField({
+	
+	width: 200,
+	top: 20
+});
+
+var t3 = Ti.UI.createTextField({
+	
+	width: 200,
+	top: 20
+});
+
+
+win.add(t1);
+win.add(t2);
+win.add(t3);
+win.open();
+

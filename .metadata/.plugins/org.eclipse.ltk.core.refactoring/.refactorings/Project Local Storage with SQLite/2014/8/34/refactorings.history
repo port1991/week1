@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Project Local Storage with SQLite/Resources/listWindow.js&apos; to &apos;listwin.js&apos;" description="Rename resource &apos;listWindow.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Resources/listWindow.js" name="listwin.js" stamp="1408488517880" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Project Local Storage with SQLite/Resources/super.js&apos; to &apos;super&apos;" description="Rename resource &apos;super.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Resources/super.js" name="super" stamp="1408492614251" updateReferences="true"/>
+</session>

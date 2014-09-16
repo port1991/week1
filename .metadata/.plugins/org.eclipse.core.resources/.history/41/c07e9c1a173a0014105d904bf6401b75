@@ -1,0 +1,36 @@
+
+var tabGroup = Titanium.UI.createTabGroup();
+
+var backgroundWindow = Ti.UI.createWindow ({
+	title: '',
+	barImage:'sample-504-doghouse.png',
+	backgroundImage: 'grid.png',
+	//fullscreen: true
+});
+
+
+
+var lastTable = Ti.UI.createTab({
+	icon: 'sample-504-doghouse.png',
+	title: 'test',
+	window: backgroundWindow
+});
+
+
+
+var label1 = Titanium.UI.createLabel({
+	color:'#999',
+	text:'I am Window 1',
+	font:{fontSize:20,fontFamily:'Helvetica Neue'},
+	textAlign:'center',
+	width:'auto'
+});
+
+
+backgroundWindow.add(label1);
+
+
+
+tabGroup.addTab(lastTable);
+tabGroup.open();
+

@@ -1,0 +1,22 @@
+var tabGroup = Titanium.UI.createTabGroup();
+
+	// first tab prepare
+	var window1 = require('list');
+	var tab1 = Ti.UI.createTab({
+		icon: 'sample-504-doghouse.png',
+		title: 'My Notes',
+		window: window1.noteWindow
+	});
+	
+	// second tab prepare
+	//var press = require('create');
+	// var tab2 = Titanium.UI.createTab({
+		// icon : 'KS_nav_views.png',
+		// title : 'Create New',
+		// window : press.mainWindow
+	// });
+// 	
+	// adding all tabs
+	tabGroup.addTab(tab1);
+	//tabGroup.addTab(tab2);
+	tabGroup.open();

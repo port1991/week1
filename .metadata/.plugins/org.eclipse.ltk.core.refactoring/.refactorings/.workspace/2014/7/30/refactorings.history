@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;CLIENT_INFO/Resources/pokedexinfo.js&apos;" deleteContents="false" description="Delete resource &apos;CLIENT_INFO/Resources/pokedexinfo.js&apos;" element1="/CLIENT_INFO/Resources/pokedexinfo.js" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1406073002693"/>
+</session>

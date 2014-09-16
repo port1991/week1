@@ -1,0 +1,8 @@
+var save = function(e,f,g) 
+{
+	
+	//console.log(JSON.stringfy(e));
+	console.log("t1= " + e + " t2= " + f + " t3= " + g);
+};
+
+exports.save = save;

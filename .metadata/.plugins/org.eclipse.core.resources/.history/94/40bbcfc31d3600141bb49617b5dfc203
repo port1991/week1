@@ -1,0 +1,26 @@
+
+var window1 = Titanium.UI.createWindow({  
+    backgroundColor:'#fff'
+});
+
+var textF1 = Titanium.UI.createTextField({
+    color:'#336699',
+    height:35,
+    top:30,
+    left:10,
+    width:50,
+    borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED
+});
+
+var arr= (0,1,2,3,4,5,6,7,8,9);
+//var input = prompt
+for( var i = 0; arr.length; i++) {
+	
+	Ti.UI.debug(i + 1);
+	
+}
+
+
+
+window1.open();
+window1.add(textF1);

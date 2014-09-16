@@ -1,0 +1,194 @@
+var loadFile = require("jsondata");
+
+
+//====================================================
+//==========DDETAIL SECTION=================
+//================================================
+var mainWindow = Ti.UI.createWindow ({
+	backgroundColor:"#fff",
+	fullscreen: true,
+});
+
+var win1 = Titanium.UI.iOS.createNavigationWindow({
+   window: mainWindow
+});
+
+
+var backButtom = Ti.UI.createLabel({
+		text: "Back to main list",
+		backgroundColor: "#000",
+		left: 0,
+		right: 0,
+		color: "#fff",
+		height: 50,
+		font: {fontSize: " 14dp"},
+		bottom: 0
+	});
+
+var detailPokemon = function(){
+	
+	var detailWindow = Ti.UI.createWindow({
+		backgroundColor: "yellow",
+		fullscreen: true
+	});
+	
+	
+	var header = Ti.UI.createLabel({
+		text: this.title,
+		backgroundColor: "#fff",
+		left: 0,
+		right: 0,
+		color: "#000",
+		height: 50,
+		font: {fontSize: " 14dp"},
+		top: 0,
+		textAlign: "center"
+	});
+	
+	
+	
+	var detailText = Ti.UI.createLabel({
+		text: this.detail,
+		color: "black"
+		
+	});
+	
+
+	
+	var label = Ti.UI.createLabel({
+		text: "Back to Pokemon List",
+		backgroundColor: "#000",
+		left: 0,
+		right: 0,
+		color: "#fff",
+		height: 50,
+		font: {fontSize: " 14dp"},
+		bottom: 0
+	});
+	
+	label.addEventListener("click", function(){
+		detailWindow.close();
+		
+	});
+	
+	
+	detailWindow.add(detailText);
+	detailWindow.add(header);
+	detailWindow.add(label);
+	detailWindow.open();
+};
+
+
+
+
+
+
+
+//=======================================
+//===============END DETAIL SECTION=================================
+//=======================================
+
+
+//====================   DETAIL SEPARATOR LINE   ================================
+
+
+
+
+
+//var electricPokemon = [{title: "Pikachu", desc: "Best Pokemon ever!!"}, {title: "Raichu", desc: "best evolution of the game"}, {title: "Voltrom", desc: "suicide tendencies..."}];
+//var waterPokemon = [{title: "Squirtle", desc: "good for soup.."}, {title: "Lapras", desc: "specific day, on an specific cave..."}, {title: "Psiduck", desc:"well a roasted duck is not bad for dinner.."}];
+
+//===========================
+//==============Table========
+
+
+var table = Ti.UI.createTableView({
+	
+	left: 10,
+	right: 10,
+	top: 10,
+	bottom: 10,
+	
+	
+	
+});
+//=============end===========
+
+
+var osName = Ti.Platform.name;
+console.log(osName);//iphoneOS //android  // iphone
+
+
+if( osName === "iphone OS") {
+	
+	table.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
+	
+}
+
+
+
+
+
+
+//var tableSector = [];
+
+var test = Ti.UI.createTableViewSection();
+
+for(var n in loadFile.jsondata) {
+	var tableSector = [];
+	
+	//create table views sections
+	var bee = Ti.UI.createTableViewSection({
+		headTitle: loadFile.jsondata[n].headTitle,
+		footTitle: loadFile.jsondata[n].footTitle
+	});
+	
+	//console.log(bee);
+	
+	for(var i =0, j=loadFile.jsondata[n].pokemon.length ; i<j ; i++){
+		var rope = Ti.UI.createTableViewRow({
+			title: loadFile.jsondata[n].pokemon[i].title,
+			detail: loadFile.jsondata[n].pokemon[i].desc
+		});
+		
+		test.add(rope);
+		rope.addEventListener("click", detailPokemon);
+	}
+	tableSector.push(bee);
+	//table.setData([test]);
+	//tableSector.push(test);
+}
+
+table.setData(tableSector);
+
+//=============END ELECTRIC POKEMON===========
+
+
+//var tableSections = [electricSection, waterSection];
+
+var backButtom = Ti.UI.createLabel({
+		text: "Back to main list",
+		backgroundColor: "#000",
+		left: 0,
+		right: 0,
+		color: "#fff",
+		height: 50,
+		font: {fontSize: " 14dp"},
+		bottom: 0
+	});
+
+	backButtom.addEventListener("click", function(){
+		mainWindow.close();
+		
+	});
+	
+	//backButtom.addEventListener("click", function(){
+		//mainWindow.close();
+		
+	//});
+
+//table.setData(tableSector);
+mainWindow.add(table);
+mainWindow.add(backButtom);
+//win1.open();
+mainWindow.open();

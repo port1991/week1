@@ -1,0 +1,26 @@
+var backgroundWindow = Ti.UI.createWindow ({
+	title: '',
+	barImage:'sample-504-doghouse.png',
+	backgroundImage: 'grid.png',
+	fullscreen: true,
+	layout: 'vertical'
+});
+
+var tabGroup = Titanium.UI.createTabGroup();
+
+var lastTable = Ti.UI.createTab({
+	icon: 'sample-504-doghouse.png',
+	title: 'test',
+	window: backgroundWindow
+});
+
+var navigationWindow = Ti.UI.createNavigationWindow({
+	window: backgroundWindow
+});
+
+
+
+
+tabGroup.addTab(lastTable);
+tabGroup.open();
+

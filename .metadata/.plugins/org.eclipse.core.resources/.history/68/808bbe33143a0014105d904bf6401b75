@@ -1,0 +1,45 @@
+
+var tabGroup = Titanium.UI.createTabGroup();
+
+var backgroundWindow = Ti.UI.createWindow ({
+	title: '',
+	barImage:'sample-504-doghouse.png',
+	backgroundImage: 'grid.png',
+	//fullscreen: true
+});
+
+
+
+var lastTable = Ti.UI.createTab({
+	icon: 'sample-1012-sticky-note@2x.png',
+	title: 'test',
+	window: backgroundWindow
+});
+
+var tab2 = Ti.UI.createTab({
+	icon: 'sample-1012-sticky-note@2x.png',
+	title: 'TAB2',
+	window: backgroundWindow
+});
+
+var label1 = Titanium.UI.createLabel({
+	color:'#999',
+	text:'I am Window 1',
+	font:{fontSize:20,fontFamily:'Helvetica Neue'},
+	textAlign:'center',
+	width:'auto'
+});
+
+backgroundWindow.add(label1);
+// var navigationWindow = Ti.UI.createWindow({
+	// navBarHidden: true,
+	// backgroundImage: 'grid.png',
+// });
+
+// var nav = Ti.UI.createNavigationGroup({
+// 	
+// });
+tabGroup.addTab(lastTable);
+tabGroup.addTab(tab2);
+tabGroup.open();
+//backgroundWindow.open();

@@ -1,0 +1,63 @@
+var listView = Ti.UI.createListView({
+	backgroundColor: "#fff"
+});
+
+
+var sections = [];
+
+for(var n in loadFile.data){
+		var listData = [];
+		var listSection = Ti.UI.createListSection({
+			
+			headerTitle: loadFile.data[n].headTitle
+		});
+		
+		for( var i = 0, j = loadFile.data[n].products.length; i<j ; i++){
+			listData.push({
+			properties: {title: loadFile.data[n].products[i].title, 
+			accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE}   //DISCLOSURE   //    CHECKMARK    // NONE             
+		
+		
+		});
+		}
+		listSection.setItems(listData);
+		sections.push(listSection);
+}
+
+var mainCl = function () {
+	
+	mainWindow.close();
+};
+
+
+var label = Ti.UI.createLabel({
+		text: "Back to main list",
+		backgroundColor: "#000",
+		left: 0,
+		right: 0,
+		color: "#fff",
+		height: 50,
+		font: {fontSize: " 14dp"},
+		bottom: 0
+	});
+
+	label.addEventListener("click", function(){
+		mainWindow.close();
+		
+	});
+	
+
+
+listView.sections = sections;
+
+mainWindow.add(listView);
+mainWindow.add(label);
+mainWindow.open();
+
+
+
+
+//=================
+//============================================
+//===============================================================
+//=============================================================

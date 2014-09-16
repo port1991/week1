@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;Circle_Yellow.png&apos; to &apos;Resources&apos;" description="Move &apos;Circle_Yellow.png&apos; to &apos;Resources&apos;" destination="Resources" element1="Resources/pictures/Circle_Yellow.png" element2="Resources/pictures/grid.png" element3="Resources/pictures/grid2.png" element4="Resources/pictures/ironmanicon.png" element5="Resources/pictures/q.png" element6="Resources/pictures/sample-1012-sticky-note@2x.png" element7="Resources/pictures/sample-504-doghouse.png" element8="Resources/pictures/sample-834-bolt@2x.png" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="8" stamp="1410771199470" updateReferences="true"/>
+</session>

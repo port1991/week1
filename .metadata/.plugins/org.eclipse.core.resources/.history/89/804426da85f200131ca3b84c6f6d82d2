@@ -1,0 +1,84 @@
+
+var loadFile= require("data");
+
+
+var mainWindow = Ti.UI.createWindow({
+	
+	backgroundColor: "#fff",
+	fullscreen: true
+});
+
+
+var designA = function(){
+
+	var tableViewStyle = require('page1');
+
+};
+
+
+var butom1 = Ti.UI.createLabel({
+		text: "Table View Style",
+		backgroundColor: "black",
+		left: 0,
+		right: 0,
+		color: "#fff",
+		height: 50,
+		font: {fontSize: " 14dp"},
+		top: 50,
+		
+});
+
+var butom2 = Ti.UI.createLabel({
+		text: "List View Style",
+		backgroundColor: "black",
+		left: 0,
+		right: 0,
+		color: "#fff",
+		height: 50,
+		font: {fontSize: " 14dp"},
+		top: 100,
+		
+});
+
+butom1.addEventListener("click", designA);
+
+/*
+var listView = Ti.UI.createListView({
+	backgroundColor: "#fff"
+});
+
+
+var sections = [];
+
+for(var n in loadFile.data){
+		var listData = [];
+		var listSection = Ti.UI.createListSection({
+			
+			headerTitle: loadFile.data[n].headTitle
+		});
+		
+		for( var i = 0, j = loadFile.data[n].products.length; i<j ; i++){
+			listData.push({
+			properties: {title: loadFile.data[n].products[i].title, 
+			accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE}   //DISCLOSURE   //    CHECKMARK    // NONE             
+		
+		
+		});
+		}
+		listSection.setItems(listData);
+		sections.push(listSection);
+}
+
+var mainCl = function () {
+	
+	mainWindow.close();
+};
+
+
+
+
+listView.sections = sections;*/
+mainWindow.add(butom1);
+mainWindow.add(butom2);
+//mainWindow.add(listView);
+mainWindow.open();

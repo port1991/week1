@@ -1,0 +1,12 @@
+
+var mainWindow = Ti.UI.createWindow ({
+	title: '',
+	backgroundImage: 'grid2.png',
+	fullscreen: true
+});
+
+
+exports.mainWindow = mainWindow;
+
+
+

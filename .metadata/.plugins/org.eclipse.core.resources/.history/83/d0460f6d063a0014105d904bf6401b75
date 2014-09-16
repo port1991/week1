@@ -1,0 +1,11 @@
+var save = function(e,f,g) 
+{
+	
+	//console.log(JSON.stringfy(e));
+	console.log("t1= " + e + " t2= " + f + " t3= " + g);
+	
+	var db = Ti.UI.Database.open("Stuff");   // we create the database
+	db.excecute('CREATE TABLE IF NOT EXISTS table(id INTEGER PRIMARY KEY)')
+};
+
+exports.save = save;

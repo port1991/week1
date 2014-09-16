@@ -1,0 +1,21 @@
+
+var mainWindow = Ti.UI.createWindow ({
+	title: 'Create a Note',
+	backgroundImage: 'grid2.png',
+	fullscreen: true,
+	layout: 'vertical'
+});
+
+var textBox = Ti.UI.createTextField({
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+  	color: '#336699',
+	width: 300,
+	height: 400,
+	top: 20,
+});
+
+mainWindow.add(textBox);
+exports.mainWindow = mainWindow;
+
+
+

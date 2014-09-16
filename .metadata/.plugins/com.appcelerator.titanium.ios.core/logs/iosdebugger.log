@@ -1,0 +1,35 @@
+Logger started at: Saturday, September 6, 2014 7:34:17 PM EDT
+Component: com.appcelerator.titanium.ios.core
+Version: 1.0.0.1401409521
+[34:17.461] Sent: >21*1410046457457*version<
+[34:17.462] Recv: >1410046457457*2*3.2.3.GA<
+[34:17.464] Sent: >20*1410046457458*update<
+[34:17.464] Recv: >1410046457458*3.2.3.GA<
+[34:17.465] Sent: >45*1410046457459*option*stepFiltersEnabled*false<
+[34:17.465] Recv: >1410046457459<
+[34:17.465] Sent: >36*1410046457460*option*monitorXHR*true<
+[34:17.465] Recv: >1410046457460<
+[34:17.466] Sent: >45*1410046457461*option*suspendOnFirstLine*false<
+[34:17.466] Recv: >1410046457461<
+[34:17.466] Sent: >46*1410046457462*option*suspendOnExceptions*false<
+[34:17.466] Recv: >1410046457462<
+[34:17.467] Sent: >41*1410046457463*option*suspendOnErrors*true<
+[34:17.467] Recv: >1410046457463<
+[34:17.467] Sent: >43*1410046457464*option*suspendOnKeywords*true<
+[34:17.468] Recv: >1410046457464<
+[34:17.468] Sent: >45*1410046457465*option*bypassConstructors*false<
+[34:17.468] Recv: >1410046457465<
+[34:17.468] Sent: >45*1410046457466*option*stepFiltersEnabled*false<
+[34:17.468] Recv: >1410046457466<
+[34:17.469] Sent: >30*1410046457467*detailFormatters<
+[34:17.469] Recv: >1410046457467<
+[34:17.469] Sent: >20*1410046457468*enable<
+[34:17.470] Recv: >1410046457468<
+[34:17.472] Recv: >threads*created*0*kroll$1<
+[34:17.474] Recv: >log*out*[DEBUG] Analytics is enabled = YES<
+[34:17.475] Recv: >log*out*[DEBUG] Loading: /Users/miguelportilla/Library/Application Support/iPhone Simulator/7.1/Applications/5D5DB7A3-A8E2-487F-A063-02218DE2DDB3/createinterfceuser.app/app.js, Resource: app_js<
+[34:17.475] Recv: >scripts*created*348035360|app:/app.js||1|55<
+[34:17.476] Recv: >resumed*0*started<
+[34:17.476] Recv: >log*out*[DEBUG] Loading: /Users/miguelportilla/Library/Application Support/iPhone Simulator/7.1/Applications/5D5DB7A3-A8E2-487F-A063-02218DE2DDB3/createinterfceuser.app/_app_props_.json, Resource: _app_props__json<
+[34:17.571] Recv: >log*out*[DEBUG] Application booted in 170.973003 ms<
+----------End of file----------

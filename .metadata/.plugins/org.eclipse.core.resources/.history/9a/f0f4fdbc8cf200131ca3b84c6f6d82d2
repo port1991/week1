@@ -1,0 +1,122 @@
+var loadFile= require("data");
+
+var openDetail = function(){
+	
+	var detailWindow = Ti.UI.createWindow({
+		backgroundColor: "blue",
+		fullscreen: true
+	});
+	var detailText = Ti.UI.createLabel({
+		text: this.detailss,
+		color: "white"
+		
+	});
+	
+	
+	detailWindow.add(detailText);
+	navigationWindow.openWindow(detailWindow);
+};
+
+
+var mainWindow = Ti.UI.createWindow ({
+	backgroundColor:"#fff",
+	fullscreen: true,
+	Title: "CANDIES"
+});
+
+
+var navigationWindow = Ti.UI.iOS.createNavigationWindow({
+	window: mainWindow
+});
+
+var table = Ti.UI.createTableView({
+	
+	left: 10,
+	right: 10,
+	top: 10,
+	bottom: 10,
+	
+});
+//=============================================
+var osName = Ti.Platform.name;
+console.log(osName);//iphoneOS //android  // iphone
+
+
+var sections = [];
+
+if( osName === "iphone OS") {
+	
+	table.styple = Ti.UI.iPhone.TableViewStyle.GROUPED;
+	
+}
+
+for(var n in loadFile.data) {
+	
+	//create table views sections
+	var tvs = Ti.UI.createTableViewSection({
+		headerTitle: loadFile.data[n].headTitle,
+		footerTitle: loadFile.data[n].footTitle
+	});
+	for(var i =0, j=loadFile.data[n].products.length ; i<j ; i++){
+		var row = Ti.UI.createTableViewRow({
+			title: loadFile.data[n].products,   //drinks.cokeProducts.products[0].title
+			detail: loadFile.data[n].products[i].desc
+		});
+		tvs.add(row);
+		row.addEventListener("click", openDetail);	
+}
+	tableSections.push(tvs);
+}
+
+
+
+
+
+table.setData(tableSections);
+mainWindow.add(table);
+//mainWindow.open();
+navigationWindow.open();
+		/*	listData.push({
+			properties: {title: loadFile.data[n].products[i].title, 
+			accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE},   //DISCLOSURE   //    CHECKMARK    // NONE             
+			details: loadFile.data[n].products[i].desc, //cookieProducts[i].desc
+		
+		});
+		}
+		listSection.setItems(listData);
+		sections.push(listSection);*/
+}
+
+var mainCl = function () {
+	
+	mainWindow.close();
+};
+
+
+var back = Ti.UI.createLabel({
+		text: "Back to main list",
+		backgroundColor: "#000",
+		left: 0,
+		right: 0,
+		color: "#fff",
+		height: 50,
+		font: {fontSize: " 14dp"},
+		bottom: 0
+	});
+
+	label.addEventListener("click", function(){
+		mainWindow.close();
+		
+	});
+
+mainWindow.add(listView);
+mainWindow.add(back);
+mainWindow.open();
+
+
+
+
+//=================
+//============================================
+//===============================================================
+//=============================================================

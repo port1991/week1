@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 1 resources to &apos;cloudapp&apos;" description="Move 1 resources to &apos;cloudapp&apos;" destination="/cloudapp" element1="/DUMMYACCOUNT/Resources" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1410621291802" updateReferences="true"/>
+</session>

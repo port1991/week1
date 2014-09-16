@@ -1,0 +1,1 @@
+var loadFile = require("cool");
